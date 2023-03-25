@@ -24,50 +24,30 @@ function App() {
             placeholder='Tìm kiếm trên Facebook' />
         </div>
       </div>
-      <div className='flex-auto flex items-center ml-14 bg-yellow-200'>
-        <button type='image'  >
-          <img src='img/trangchu.png'
-            className='w-9 h-9 mr-11 ml-11 mt-3 mb-3' />
-        </button>
-        <button type='image'  >
-          <img src='img/video.png'
-            className='w-9 h-7 mr-11 ml-11 mt-3 mb-3' />
-        </button>
-        <button type='image'  >
-          <img src='img/marketplace.png'
+      <div className='flex-auto flex items-center ml-14'>
+        {['img/trangchu.png','img/video.png','img/marketplace.png','img/group.png','img/game.png'].map(item => {
+          return(
+            <button type='image'  >
+          <img src={item}
             className='w-8 h-8 mr-11 ml-11 mt-3 mb-3' />
         </button>
-        <button type='image'  >
-          <img src='img/group.png'
-            className='w-7 h-7 mr-11 ml-11 mt-3 mb-3' />
-        </button>
-        <button type='image'  >
-          <img src='img/game.png'
-            className='w-9 h-5 mr-11 ml-11 mt-3 mb-3' />
-        </button>
+          )
+        })}
       </div>
       <div className='flex-auto flex items-center justify-end'>
-        <button type='image' className='mr-1 ml-1'>
-          <img src='img/option.png'
-            className='w-9 h-9 ' />
+        {['img/option.png','img/tinnhan.png','img/thongbao.png','img/avatar.jpg'].map(item => {
+          return(
+            <button type='image' className='mr-1 ml-1 rounded-full '> 
+          <img src={item}
+            className='w-10 h-10 rounded-full ' />
         </button>
-        <button type='image' className='mr-1 ml-1'>
-          <img src='img/tinnhan.png'
-            className='w-9 h-9 ' />
-        </button>
-        <button type='image' className='mr-1 ml-1'>
-          <img src='img/thongbao.png'
-            className='w-10 h-10  ' />
-        </button>
-        <button type='image' className='mr-5 ml-1'>
-          <img src='img/avatar.jpg'
-            className='w-10 h-10 object-cover rounded-full' />
-        </button>
+          )
+        })}
       </div>
     </div>
     {/* </Header>
     <Body> */}
-    <div className='flex-auto flex bg-gray-100 pt-3'>
+    <div className='flex-auto flex bg-gray-100 '>
     <BodyLeft/>
     <BodyFeed/>
     </div>
